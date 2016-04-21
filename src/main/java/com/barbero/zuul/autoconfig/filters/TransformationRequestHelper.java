@@ -91,12 +91,9 @@ public class TransformationRequestHelper {
                 return;
             }
             MultiValueMap<String, String> queryParams = PROXY_HELPER.buildZuulRequestQueryParams(ctx.getRequest());
-            if (queryParams == null) {
-                queryParams = new LinkedMultiValueMap<>();
-            }
-            final Map<String, String> paramsAsMap = tokenize(params, DELIMITER);
+            Map<String, String> paramsAsMap = tokenize(params, DELIMITER);
             queryParams.keySet().stream().filter(paramsAsMap::containsKey).forEach(paramsAsMap::remove);
-//            paramsAsMap.entrySet().stream().forEach(entry -> queryParams.put(entry.getKey(), entry.getValue()));
+            paramsAsMap.entrySet().stream().forEach(entry -> queryParams.put(entry.getKey(), Arrays.asList(entry.getValue())));
             ctx.setRequestQueryParams(queryParams);
         }
     }
