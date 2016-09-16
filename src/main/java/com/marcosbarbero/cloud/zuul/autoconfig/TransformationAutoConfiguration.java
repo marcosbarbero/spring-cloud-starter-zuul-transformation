@@ -1,8 +1,8 @@
-package com.barbero.zuul.autoconfig;
+package com.marcosbarbero.cloud.zuul.autoconfig;
 
-import com.barbero.zuul.autoconfig.filters.TransformationPostFilter;
-import com.barbero.zuul.autoconfig.filters.TransformationPreFilter;
-import com.barbero.zuul.autoconfig.filters.TransformationRequestHelper;
+import com.marcosbarbero.cloud.zuul.autoconfig.filters.TransformationPostFilter;
+import com.marcosbarbero.cloud.zuul.autoconfig.filters.TransformationPreFilter;
+import com.marcosbarbero.cloud.zuul.autoconfig.filters.TransformationRequestHelper;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableConfigurationProperties(TransformationProperties.class)
-@ConditionalOnProperty(value = "zuul.transformer.enabled")
+@ConditionalOnProperty(value = "zuul.transformer.enabled", havingValue = "true")
 public class TransformationAutoConfiguration {
 
     @Bean

@@ -1,4 +1,4 @@
-package com.barbero.zuul.autoconfig.props;
+package com.marcosbarbero.cloud.zuul.autoconfig.props;
 
 import lombok.Data;
 

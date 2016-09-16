@@ -1,4 +1,4 @@
-package com.barbero.zuul.autoconfig.props;
+package com.marcosbarbero.cloud.zuul.autoconfig.props;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +22,7 @@ public class TransformationRequest {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
+    @EqualsAndHashCode(callSuper = true)
     public class Request extends AbstractTransformation {
         private Set<RequestMethod> methods = new LinkedHashSet<>();
         private Set<String> ignoredPaths = new LinkedHashSet<>();

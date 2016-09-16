@@ -1,8 +1,7 @@
-package com.barbero.zuul.autoconfig.props;
+package com.marcosbarbero.cloud.zuul.autoconfig.props;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**

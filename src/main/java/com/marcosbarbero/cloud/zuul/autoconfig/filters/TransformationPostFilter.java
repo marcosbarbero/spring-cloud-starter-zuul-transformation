@@ -1,6 +1,6 @@
-package com.barbero.zuul.autoconfig.filters;
+package com.marcosbarbero.cloud.zuul.autoconfig.filters;
 
-import com.barbero.zuul.autoconfig.TransformationProperties;
+import com.marcosbarbero.cloud.zuul.autoconfig.TransformationProperties;
 import com.netflix.zuul.ZuulFilter;
 
 /**

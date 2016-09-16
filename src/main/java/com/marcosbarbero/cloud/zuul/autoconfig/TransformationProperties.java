@@ -1,6 +1,6 @@
-package com.barbero.zuul.autoconfig;
+package com.marcosbarbero.cloud.zuul.autoconfig;
 
-import com.barbero.zuul.autoconfig.props.Policy;
+import com.marcosbarbero.cloud.zuul.autoconfig.props.Policy;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.barbero.zuul.autoconfig.TransformationAutoConfiguration
+com.marcosbarbero.cloud.zuul.autoconfig.TransformationAutoConfiguration
