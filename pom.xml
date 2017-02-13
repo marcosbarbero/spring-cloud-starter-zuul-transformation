@@ -14,13 +14,6 @@
     </description>
     <version>1.0.0.RELEASE</version>
 
-    <properties>
-        <lombok.version>1.16.10</lombok.version>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <java.version>1.8</java.version>
-    </properties>
-
     <licenses>
         <license>
             <name>Apache License, Version 2.0</name>
@@ -117,7 +110,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-netflix</artifactId>
-                <version>1.1.6.RELEASE</version>
+                <version>1.2.5.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -137,9 +130,13 @@
         </dependency>
 
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
         </dependency>
 
         <dependency>
