@@ -5,6 +5,8 @@ import com.marcosbarbero.cloud.zuul.autoconfig.props.Policy;
 import com.marcosbarbero.cloud.zuul.autoconfig.props.TransformationRequest;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
+
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.netflix.zuul.filters.Route;
 import org.springframework.cloud.netflix.zuul.filters.RouteLocator;
@@ -16,17 +18,12 @@ import javax.servlet.http.HttpServletRequest;
  * @author Marcos Barbero
  */
 @Slf4j
+@RequiredArgsConstructor
 public class TransformationPreFilter extends ZuulFilter {
 
     private static final UrlPathHelper URL_PATH_HELPER = new UrlPathHelper();
-    private TransformationProperties transformationProperties;
-    private RouteLocator routeLocator;
-
-    public TransformationPreFilter(TransformationProperties transformationProperties,
-                                   RouteLocator routeLocator) {
-        this.transformationProperties = transformationProperties;
-        this.routeLocator = routeLocator;
-    }
+    private final TransformationProperties transformationProperties;
+    private final RouteLocator routeLocator;
 
     /**
      * Get the pathWithinApplication from request.

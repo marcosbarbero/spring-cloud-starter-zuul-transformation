@@ -3,16 +3,15 @@ package com.marcosbarbero.cloud.zuul.autoconfig.filters;
 import com.marcosbarbero.cloud.zuul.autoconfig.TransformationProperties;
 import com.netflix.zuul.ZuulFilter;
 
+import lombok.RequiredArgsConstructor;
+
 /**
  * @author Marcos Barbero
  */
+@RequiredArgsConstructor
 public class TransformationPostFilter extends ZuulFilter {
 
-    private TransformationProperties transformationProperties;
-
-    public TransformationPostFilter(TransformationProperties transformationProperties) {
-        this.transformationProperties = transformationProperties;
-    }
+    private final TransformationProperties transformationProperties;
 
     @Override
     public String filterType() {
