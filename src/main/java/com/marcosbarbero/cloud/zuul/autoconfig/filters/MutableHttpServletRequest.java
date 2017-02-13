@@ -9,7 +9,16 @@ import javax.servlet.http.HttpServletRequestWrapper;
  */
 public class MutableHttpServletRequest extends HttpServletRequestWrapper {
 
-    public MutableHttpServletRequest(HttpServletRequest request) {
+    private HttpServletRequest request;
+
+    MutableHttpServletRequest(HttpServletRequest request) {
         super(request);
+        this.request = request;
     }
+
+    @Override
+    public HttpServletRequest getRequest() {
+        return this.request;
+    }
+
 }
